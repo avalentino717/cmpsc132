@@ -14,10 +14,6 @@ def translate(translation, msg):
     temp_list = []
 
     for i in new_msg_lst:
-        '''if i in translation:
-            new_msg += (translation[i] + " ")
-        else:
-            new_msg += (i + " ")'''
         if i in translation:
             temp_list.append(translation[i])
         else:

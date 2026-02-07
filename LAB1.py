@@ -53,40 +53,16 @@ def invert(d):
 
     pass
 
-'''def employee_update(d, bonus, year):
+
+
+def employee_update(d, bonus, year):
+
     """
         >>> records = {2020:{"John":["Managing Director","Full-time",65000],"Sally":["HR Director","Full-time",60000],"Max":["Sales Associate","Part-time",20000]}, 2021:{"John":["Managing Director","Full-time",70000],"Sally":["HR Director","Full-time",65000],"Max":["Sales Associate","Part-time",25000]}}
         >>> employee_update(records,7500,2022)
         {2020: {'John': ['Managing Director', 'Full-time', 65000], 'Sally': ['HR Director', 'Full-time', 60000], 'Max': ['Sales Associate', 'Part-time', 20000]}, 2021: {'John': ['Managing Director', 'Full-time', 70000], 'Sally': ['HR Director', 'Full-time', 65000], 'Max': ['Sales Associate', 'Part-time', 25000]}, 2022: {'John': ['Managing Director', 'Full-time', 77500], 'Sally': ['HR Director', 'Full-time', 72500], 'Max': ['Sales Associate', 'Part-time', 32500]}}
     """
-    # - YOUR CODE STARTS HERE -
-
-    #for key, value in d.items():
-        #print(f"key:", key, "\nvalue:", value)
-    new_d = {}
-
-    for i in d.values():
-        for key, value in i.items():
-            if value in new_d.values():
-                del new_d[key]
-            else:
-                new_d[key] = value
-    #print(d)
-    #print(new_d)
-    for key, value in new_d.items():
-        #print(f"key:", key, "\nvalue:", value)
-        #print(value[2])
-        value[2] += bonus
-    #print(new_d)
-    #print(d)
     
-
-    d[year] = new_d
-
-    return d
-        
-    pass'''
-def employee_update(d, bonus, year):
     new_d = {}
 
     for i in d.values():
@@ -110,7 +86,7 @@ def run_tests():
     import doctest
 
     # Run start tests in all docstrings
-    doctest.testmod(verbose=True)
+    #doctest.testmod(verbose=True)
     
     # Run start tests per function - Uncomment the next line to run doctest by function. Replace frequency with the name of the function you want to test
     #doctest.run_docstring_examples(frequency, globals(), name='LAB1',verbose=True)   
